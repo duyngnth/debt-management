@@ -9,43 +9,122 @@
     <link rel="stylesheet" href="~/DebtManagement.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">DebtManagement</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
+    <div class="body-container">
+        <div class="sidebar-container">
+            <ul class="nav-list">
+                <li class="nav-header">
+                    <a href="/" class="page-title">
+                        <span class="fs-4">Debt Management</span>
+                      </a>
+                </li>
+                <li class="nav-layout-item">
+                    <a class="nav-item" href="#" aria-current="page">
+                      Home
+                    </a>
+                </li>
+                <li class="nav-layout-item">
+                    <a class="nav-item" href="#"  aria-current="page">
+                      Home
+                    </a>
+                </li>
+                <li class="nav-layout-item">
+                    <a class="nav-item" href="#"  aria-current="page">
+                      Home
+                    </a>
+                </li>
+            </ul>
+            <div class="nav-bottom-option">
+                <a class="nav-bottom-item" href="#"  aria-current="page">
+                    Login
+                </a> | 
+                <a class="nav-bottom-item" href="#"  aria-current="page">
+                    Register
+                </a>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - DebtManagement - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
-    </footer>
-
+        <div>
+            @RenderBody()
+            <footer class="border-top footer text-muted">
+                <div class="container">
+                    &copy; 2023 - DebtManagement
+                </div>
+            </footer>
+        </div>
+        
+    </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-
-    @await RenderSectionAsync("Scripts", required: false)
+    <!-- @await RenderSectionAsync("Scripts", required: false) -->
 </body>
 </html>
+<style>
+    body{
+        margin: 0;
+        font: 1.2rem "Fira Sans", sans-serif;
+    }
+    .body-container{
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 15% 85%;
+        background-color: #EEEEEE;
+    }
+    .sidebar-container {
+        background-color: #393E46;
+        height: inherit;
+        display: flex;
+        align-content: space-between;
+        flex-direction: column;
+    }
+    .sidebar-container ul{
+        text-decoration: none;
+        list-style: none;
+    }
+    .page-title{
+        text-decoration: none;
+        color: #EEEEEE !important;
+        font-size: 24px;
+    }
+    .nav-list{
+        padding-left: 8px;
+        flex: 1;
+    }
+    .nav-header{
+        padding: 8px;
+        padding-bottom: 24px;
+        margin-right: 16px;
+        margin-left: 8px;
+        border-bottom: 1px solid #222831;
+    }
+    .nav-item{
+        display: block;
+        padding: 8px;
+        margin: 4px;
+        margin-right: 24px;
+        width: 200px;
+        text-decoration: none;
+        color: #EEEEEE !important;
+    }
+    .nav-layout-item{
+        margin: 8px;
+    }
+    .nav-bottom-option{
+        display: flex;
+        padding-bottom: 24px;
+        padding-left: 16px;
+    }
+    .nav-item:hover{
+        border-radius: 8px;
+        background-color: #222831;
+        color: #00ADB5 !important;
+    }
+    .nav-bottom-item{
+        color: #EEEEEE !important;
+        text-decoration: none;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .nav-bottom-item:hover{
+        color: #00ADB5 !important;
+    }
+</style>
