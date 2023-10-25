@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - DebtManagement</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/DebtManagement.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="body-container">
+        <div class="sidebar-container">
+            <ul class="nav-list">
+                <li class="nav-header">
+                    <a href="/" class="page-title">
+                        <span class="fs-4">Debt Management</span>
+                      </a>
+                </li>
+                <li class="nav-layout-item">
+                    <a class="nav-item" href="#" aria-current="page">
+                      Home
+                    </a>
+                </li>
+                <li class="nav-layout-item">
+                    <a class="nav-item" href="#"  aria-current="page">
+                      Home
+                    </a>
+                </li>
+                <li class="nav-layout-item">
+                    <a class="nav-item" href="#"  aria-current="page">
+                      Home
+                    </a>
+                </li>
+            </ul>
+            <div class="nav-bottom-option">
+                <a class="nav-bottom-item" href="#"  aria-current="page">
+                    Login
+                </a> | 
+                <a class="nav-bottom-item" href="#"  aria-current="page">
+                    Register
+                </a>
+            </div>
+        </div>
+        <main role="main" class="sec pb-3">
+            @RenderBody()
+            <footer class="border-top footer text-muted">
+                <div class="container">
+                    &copy; 2023 - DebtManagement
+                </div>
+            </footer>
+        </main>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <!-- @await RenderSectionAsync("Scripts", required: false) -->
+</body>
+</html>
+<style>
+    body{
+        margin: 0;
+        font: 1.2rem "Fira Sans", sans-serif;
+    }
+    .body-container{
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 15% 85%;
+        background-color: #EEEEEE;
+    }
+    .sidebar-container {
+        background-color: #393E46;
+        height: inherit;
+        display: flex;
+        align-content: space-between;
+        flex-direction: column;
+    }
+    .sidebar-container ul{
+        text-decoration: none;
+        list-style: none;
+    }
+    .page-title{
+        text-decoration: none;
+        color: #EEEEEE;
+        font-size: 24px;
+    }
+    .nav-list{
+        padding-left: 8px;
+        flex: 1;
+    }
+    .nav-header{
+        padding: 8px;
+        padding-bottom: 24px;
+        margin-right: 16px;
+        margin-left: 8px;
+        border-bottom: 1px solid #222831;
+    }
+    .nav-item{
+        display: block;
+        padding: 8px;
+        margin: 4px;
+        margin-right: 24px;
+        width: 200px;
+        text-decoration: none;
+        color: #EEEEEE;
+    }
+    .nav-layout-item{
+        margin: 8px;
+    }
+    .nav-bottom-option{
+        display: flex;
+        padding-bottom: 32px;
+        padding-left: 16px;
+    }
+    .nav-item:hover{
+        border-radius: 8px;
+        background-color: #222831;
+        color: #00ADB5;
+    }
+    .nav-bottom-item{
+        color: #EEEEEE;
+        text-decoration: none;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .nav-bottom-item:hover{
+        color: #00ADB5;
+    }
+</style>
