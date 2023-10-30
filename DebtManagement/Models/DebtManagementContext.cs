@@ -43,6 +43,10 @@ public partial class DebtManagementContext : DbContext
             entity.HasOne(d => d.Creditor).WithMany(p => p.Debits)
                 .HasForeignKey(d => d.CreditorId)
                 .HasConstraintName("FK__Debit__creditorI__398D8EEE");
+
+            entity.HasMany(p => p.DebitDetails).WithOne(p => p.Debit)
+                .HasForeignKey(d => d.DebitId)
+                .OnDelete(DeleteBehavior.Cascade);
         });
 
         modelBuilder.Entity<DebitDetail>(entity =>
@@ -67,7 +71,8 @@ public partial class DebtManagementContext : DbContext
 
             entity.HasOne(d => d.Debit).WithMany(p => p.DebitDetails)
                 .HasForeignKey(d => d.DebitId)
-                .HasConstraintName("FK__DebitDeta__debit__3C69FB99");
+                .HasConstraintName("FK__DebitDeta__debit__3C69FB99")
+                .OnDelete(DeleteBehavior.Cascade);
         });
 
         modelBuilder.Entity<User>(entity =>

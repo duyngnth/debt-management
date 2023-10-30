@@ -1,0 +1,54 @@
+﻿@page
+@model DebtManagement.Pages.DebitCtrl.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Debt list</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Phone
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Remaining amount
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Debits) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DebtorName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DebtorPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                    @item.RemainingAmount.ToString("#,##0")
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="../DebitDetailCtrl/Index" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

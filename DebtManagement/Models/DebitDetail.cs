@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace DebtManagement.Models;
 
@@ -9,6 +10,7 @@ public partial class DebitDetail
 
     public int? DebitId { get; set; }
 
+    [Range(0, double.MaxValue, ErrorMessage = "The amount must be greater than 0")]
     public decimal Amount { get; set; }
 
     public bool IsPaid { get; set; }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FPT University\\Sem 7 (Fall 2023)\\Sub docs\\PRN221\\VisualStudioProjects\\Group11_DebtManagement_Project\\DebtManagement\\DebtManagement.csproj": {}
+    "D:\\FPT University\\Sem 7 (Fall 2023)\\Sub docs\\PRN221\\VisualStudioProjects\\debt-management\\DebtManagement\\DebtManagement.csproj": {}
   },
   "projects": {
-    "D:\\FPT University\\Sem 7 (Fall 2023)\\Sub docs\\PRN221\\VisualStudioProjects\\Group11_DebtManagement_Project\\DebtManagement\\DebtManagement.csproj": {
+    "D:\\FPT University\\Sem 7 (Fall 2023)\\Sub docs\\PRN221\\VisualStudioProjects\\debt-management\\DebtManagement\\DebtManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FPT University\\Sem 7 (Fall 2023)\\Sub docs\\PRN221\\VisualStudioProjects\\Group11_DebtManagement_Project\\DebtManagement\\DebtManagement.csproj",
+        "projectUniqueName": "D:\\FPT University\\Sem 7 (Fall 2023)\\Sub docs\\PRN221\\VisualStudioProjects\\debt-management\\DebtManagement\\DebtManagement.csproj",
         "projectName": "DebtManagement",
-        "projectPath": "D:\\FPT University\\Sem 7 (Fall 2023)\\Sub docs\\PRN221\\VisualStudioProjects\\Group11_DebtManagement_Project\\DebtManagement\\DebtManagement.csproj",
+        "projectPath": "D:\\FPT University\\Sem 7 (Fall 2023)\\Sub docs\\PRN221\\VisualStudioProjects\\debt-management\\DebtManagement\\DebtManagement.csproj",
         "packagesPath": "C:\\Users\\duyng\\.nuget\\packages\\",
-        "outputPath": "D:\\FPT University\\Sem 7 (Fall 2023)\\Sub docs\\PRN221\\VisualStudioProjects\\Group11_DebtManagement_Project\\DebtManagement\\obj\\",
+        "outputPath": "D:\\FPT University\\Sem 7 (Fall 2023)\\Sub docs\\PRN221\\VisualStudioProjects\\debt-management\\DebtManagement\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\duyng\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -54,11 +54,19 @@
               "target": "Package",
               "version": "[7.0.13, )"
             },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[6.0.23, )"
+            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.13, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.16, )"
             }
           },
           "imports": [
