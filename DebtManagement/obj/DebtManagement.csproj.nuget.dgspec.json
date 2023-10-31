@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FPT University\\Sem 7 (Fall 2023)\\Sub docs\\PRN221\\VisualStudioProjects\\debt-management\\DebtManagement\\DebtManagement.csproj": {}
+    "D:\\fpt\\PRN221\\debt-management\\DebtManagement\\DebtManagement.csproj": {}
   },
   "projects": {
-    "D:\\FPT University\\Sem 7 (Fall 2023)\\Sub docs\\PRN221\\VisualStudioProjects\\debt-management\\DebtManagement\\DebtManagement.csproj": {
+    "D:\\fpt\\PRN221\\debt-management\\DebtManagement\\DebtManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FPT University\\Sem 7 (Fall 2023)\\Sub docs\\PRN221\\VisualStudioProjects\\debt-management\\DebtManagement\\DebtManagement.csproj",
+        "projectUniqueName": "D:\\fpt\\PRN221\\debt-management\\DebtManagement\\DebtManagement.csproj",
         "projectName": "DebtManagement",
-        "projectPath": "D:\\FPT University\\Sem 7 (Fall 2023)\\Sub docs\\PRN221\\VisualStudioProjects\\debt-management\\DebtManagement\\DebtManagement.csproj",
-        "packagesPath": "C:\\Users\\duyng\\.nuget\\packages\\",
-        "outputPath": "D:\\FPT University\\Sem 7 (Fall 2023)\\Sub docs\\PRN221\\VisualStudioProjects\\debt-management\\DebtManagement\\obj\\",
+        "projectPath": "D:\\fpt\\PRN221\\debt-management\\DebtManagement\\DebtManagement.csproj",
+        "packagesPath": "C:\\Users\\minhd\\.nuget\\packages\\",
+        "outputPath": "D:\\fpt\\PRN221\\debt-management\\DebtManagement\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\duyng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\minhd\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -88,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
