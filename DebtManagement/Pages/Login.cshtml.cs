@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
 using System.Text.RegularExpressions;
 
-namespace DebtManagement.Pages.Shared
+namespace DebtManagement.Pages
 {
     public class LoginModel : PageModel
     {
@@ -37,7 +37,7 @@ namespace DebtManagement.Pages.Shared
                 ModelState.AddModelError("Email", "Email is incorrect or not exist!");
                 return Page();
             }
-            else if(!user.Password.Equals(Password))
+            else if (!user.Password.Equals(Password))
             {
                 ModelState.AddModelError("Password", "Password is incorrect!");
                 return Page();

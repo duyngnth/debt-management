@@ -122,10 +122,10 @@
             {
                 <div class="nav-bottom-option">
 
-                    <a class="nav-bottom-item" asp-area="" asp-page="/Shared/Login" aria-current="page">
+                    <a class="nav-bottom-item" asp-area="" asp-page="/Login" aria-current="page">
                         Login
                     </a> |
-                    <a class="nav-bottom-item" asp-area="" asp-page="/Shared/Register" aria-current="page">
+                    <a class="nav-bottom-item" asp-area="" asp-page="/Register" aria-current="page">
                         Register
                     </a>
                 </div>
@@ -134,7 +134,7 @@
             {
                 <div class="nav-bottom-option">
                     <p class="nav-bottom-item" >Welcome, @HttpContextAccessor.HttpContext.Session.GetString("userName") </p> |
-                    <a class="nav-bottom-item" asp-area="" asp-page="/Shared/Logout" aria-current="page">
+                    <a class="nav-bottom-item" asp-area="" asp-page="/Logout" aria-current="page">
                         LogOut
                     </a>
                 </div>

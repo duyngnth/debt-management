@@ -4,11 +4,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
 using System.Text.RegularExpressions;
 
-namespace DebtManagement.Pages.Shared
+namespace DebtManagement.Pages
 {
     public class RegisterModel : PageModel
     {
-        private readonly DebtManagement.Models.DebtManagementContext _context;
+        private readonly DebtManagementContext _context;
         [BindProperty]
         public string Email { get; set; } = string.Empty;
         [StringLength(24, ErrorMessage = "{0} must be between {2} and {1} characters.", MinimumLength = 8)]
@@ -19,7 +19,7 @@ namespace DebtManagement.Pages.Shared
         [StringLength(24, ErrorMessage = "{0} must be between {2} and {1} characters.", MinimumLength = 8)]
         [BindProperty]
         public string DisplayName { get; set; } = string.Empty;
-        public RegisterModel(DebtManagementContext context )
+        public RegisterModel(DebtManagementContext context)
         {
             _context = context;
         }
@@ -32,24 +32,25 @@ namespace DebtManagement.Pages.Shared
             {
                 return Page();
             }
-            else if(ModelState.IsValid)
+            else if (ModelState.IsValid)
             {
                 bool validation = true;
                 Regex regex = new Regex(@"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$");
                 Match match = regex.Match(Email);
-                
+
                 //check email regex
                 if (!match.Success)
                 {
                     ModelState.AddModelError("Email", "Email must follow the correct format (Example: a@gmail.com)");
                     validation = false;
-                }else
+                }
+                else
                 {
                     //check if email already exist
                     string? existEmail = _context.Users.Where(
                         u => u.Email.ToLower().Equals(Email.ToLower())
                         )?.FirstOrDefault()?.Email;
-                    if(existEmail != null)
+                    if (existEmail != null)
                     {
                         ModelState.AddModelError("Email", "Email already exist");
                         validation = false;

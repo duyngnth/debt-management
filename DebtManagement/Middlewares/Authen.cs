@@ -13,8 +13,8 @@
         {
             List<string> publicUrls = new List<string>()
             {
-                "/shared/login",
-                "/shared/register"
+                "/login",
+                "/register"
             };
             int? userId = context.Session.GetInt32("userId");
 
@@ -22,7 +22,7 @@
             if (userId == null && !publicUrls.Contains(context.Request.Path.ToString().ToLower()))
             {
                 // No active session, redirect to login page
-                context.Response.Redirect("/shared/login");
+                context.Response.Redirect("/login");
                 return;
             }
             else if (userId != null && publicUrls.Contains(context.Request.Path.ToString().ToLower()))

@@ -64,20 +64,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/FPT University/Sem 7 (Fall 2023)/Sub docs/PRN221/VisualStudioProjects/debt-management/DebtManagement/Pages/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FPT University/Sem 7 (Fall 2023)/Sub docs/PRN221/VisualStudioProjects/debt-management/DebtManagement/Pages/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/FPT University/Sem 7 (Fall 2023)/Sub docs/PRN221/VisualStudioProjects/debt-management/DebtManagement/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FPT University/Sem 7 (Fall 2023)/Sub docs/PRN221/VisualStudioProjects/debt-management/DebtManagement/Pages/Shared/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXExvZ2luLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/FPT University/Sem 7 (Fall 2023)/Sub docs/PRN221/VisualStudioProjects/debt-management/DebtManagement/Pages/Shared/Logout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXExvZ291dC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/FPT University/Sem 7 (Fall 2023)/Sub docs/PRN221/VisualStudioProjects/debt-management/DebtManagement/Pages/Shared/Register.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXFJlZ2lzdGVyLmNzaHRtbA==
+[D:/FPT University/Sem 7 (Fall 2023)/Sub docs/PRN221/VisualStudioProjects/debt-management/DebtManagement/Pages/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/FPT University/Sem 7 (Fall 2023)/Sub docs/PRN221/VisualStudioProjects/debt-management/DebtManagement/Pages/Shared/_ValidationScriptsPartial.cshtml]
