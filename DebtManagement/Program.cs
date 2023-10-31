@@ -1,3 +1,4 @@
+using DebtManagement.Middlewares;
 using DebtManagement.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -39,6 +40,8 @@ app.UseRouting();
 app.UseSession();
 
 app.UseAuthorization();
+
+app.UseMiddleware<Authen>();
 
 app.MapRazorPages();
 

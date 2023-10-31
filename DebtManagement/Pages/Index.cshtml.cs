@@ -12,9 +12,9 @@ namespace DebtManagement.Pages
             _logger = logger;
         }
 
-        public void OnGet()
+        public IActionResult OnGet()
         {
-
+            return RedirectToPagePermanent("/DebitCtrl/Index");
         }
     }
 }
