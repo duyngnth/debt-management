@@ -44,7 +44,11 @@ namespace DebtManagement.Pages
             }
             HttpContext.Session.SetInt32("userId", user.Id);
             HttpContext.Session.SetString("userName", user.DisplayName);
-            return RedirectToPage("/Index");
+            HttpContext.Session.SetInt32("userType", user.Type);
+            if (user.Type == 1)
+                return RedirectToPage("/Admin/UserCtrl/Index");
+            else
+                return RedirectToPage("/Index");
         }
     }
 }

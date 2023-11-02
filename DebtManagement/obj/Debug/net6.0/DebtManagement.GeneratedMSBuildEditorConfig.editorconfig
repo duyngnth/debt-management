@@ -16,6 +16,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\FPT University\Sem 7 (Fall 2023)\Sub docs\PRN221\VisualStudioProjects\debt-management\DebtManagement
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/FPT University/Sem 7 (Fall 2023)/Sub docs/PRN221/VisualStudioProjects/debt-management/DebtManagement/Pages/Admin/UserCtrl/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlckN0cmxcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FPT University/Sem 7 (Fall 2023)/Sub docs/PRN221/VisualStudioProjects/debt-management/DebtManagement/Pages/Admin/UserCtrl/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlckN0cmxcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FPT University/Sem 7 (Fall 2023)/Sub docs/PRN221/VisualStudioProjects/debt-management/DebtManagement/Pages/Admin/UserCtrl/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlckN0cmxcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FPT University/Sem 7 (Fall 2023)/Sub docs/PRN221/VisualStudioProjects/debt-management/DebtManagement/Pages/Admin/UserCtrl/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlckN0cmxcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FPT University/Sem 7 (Fall 2023)/Sub docs/PRN221/VisualStudioProjects/debt-management/DebtManagement/Pages/Admin/UserCtrl/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlckN0cmxcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/FPT University/Sem 7 (Fall 2023)/Sub docs/PRN221/VisualStudioProjects/debt-management/DebtManagement/Pages/DebitCtrl/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGViaXRDdHJsXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

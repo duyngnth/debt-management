@@ -85,6 +85,7 @@ namespace DebtManagement.Pages
                 Email = Email,
                 Password = Password,
                 DisplayName = DisplayName,
+                Type = 2
             });
             await _context.SaveChangesAsync();
             return RedirectToPage("./Login");

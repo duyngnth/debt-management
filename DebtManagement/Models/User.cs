@@ -16,5 +16,7 @@ public partial class User
 
     public string DisplayName { get; set; } = null!;
 
+    public int Type { get; set; }
+
     public virtual ICollection<Debit> Debits { get; set; } = new List<Debit>();
 }
