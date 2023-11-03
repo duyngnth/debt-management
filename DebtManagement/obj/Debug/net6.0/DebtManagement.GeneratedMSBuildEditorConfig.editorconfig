@@ -16,6 +16,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\FPT University\Sem 7 (Fall 2023)\Sub docs\PRN221\VisualStudioProjects\debt-management\DebtManagement
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/FPT University/Sem 7 (Fall 2023)/Sub docs/PRN221/VisualStudioProjects/debt-management/DebtManagement/Pages/Admin/UserCtrl/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlckN0cmxcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FPT University/Sem 7 (Fall 2023)/Sub docs/PRN221/VisualStudioProjects/debt-management/DebtManagement/Pages/Admin/UserCtrl/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlckN0cmxcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FPT University/Sem 7 (Fall 2023)/Sub docs/PRN221/VisualStudioProjects/debt-management/DebtManagement/Pages/Admin/UserCtrl/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlckN0cmxcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FPT University/Sem 7 (Fall 2023)/Sub docs/PRN221/VisualStudioProjects/debt-management/DebtManagement/Pages/Admin/UserCtrl/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlckN0cmxcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FPT University/Sem 7 (Fall 2023)/Sub docs/PRN221/VisualStudioProjects/debt-management/DebtManagement/Pages/Admin/UserCtrl/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlckN0cmxcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/FPT University/Sem 7 (Fall 2023)/Sub docs/PRN221/VisualStudioProjects/debt-management/DebtManagement/Pages/DebitCtrl/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGViaXRDdHJsXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -64,20 +84,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/FPT University/Sem 7 (Fall 2023)/Sub docs/PRN221/VisualStudioProjects/debt-management/DebtManagement/Pages/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FPT University/Sem 7 (Fall 2023)/Sub docs/PRN221/VisualStudioProjects/debt-management/DebtManagement/Pages/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/FPT University/Sem 7 (Fall 2023)/Sub docs/PRN221/VisualStudioProjects/debt-management/DebtManagement/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FPT University/Sem 7 (Fall 2023)/Sub docs/PRN221/VisualStudioProjects/debt-management/DebtManagement/Pages/Shared/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXExvZ2luLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/FPT University/Sem 7 (Fall 2023)/Sub docs/PRN221/VisualStudioProjects/debt-management/DebtManagement/Pages/Shared/Logout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXExvZ291dC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/FPT University/Sem 7 (Fall 2023)/Sub docs/PRN221/VisualStudioProjects/debt-management/DebtManagement/Pages/Shared/Register.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXFJlZ2lzdGVyLmNzaHRtbA==
+[D:/FPT University/Sem 7 (Fall 2023)/Sub docs/PRN221/VisualStudioProjects/debt-management/DebtManagement/Pages/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/FPT University/Sem 7 (Fall 2023)/Sub docs/PRN221/VisualStudioProjects/debt-management/DebtManagement/Pages/Shared/_ValidationScriptsPartial.cshtml]
