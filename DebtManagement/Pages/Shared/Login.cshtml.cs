@@ -19,8 +19,6 @@ namespace DebtManagement.Pages.Shared
         }
         public void OnGet()
         {
-            HttpContext.Session.Remove("userId");
-            HttpContext.Session.Remove("userName");
         }
         public IActionResult OnPost(string Email, string Password)
         {

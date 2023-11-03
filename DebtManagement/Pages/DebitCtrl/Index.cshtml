@@ -5,50 +5,16 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Debt list</h1>
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                Name
-            </th>
-            <th>
-                Phone
-            </th>
-            <th>
-                Description
-            </th>
-            <th>
-                Remaining amount
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.Debits) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.DebtorName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DebtorPhone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                    @item.RemainingAmount.ToString("#,##0")
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-page="../DebitDetailCtrl/Index" asp-route-id="@item.Id">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<div class="card-list m-4 d-flex flex-row gap-3">
+    @foreach(var item in Model.Debits){
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Name: @Html.DisplayFor(modelItem => item.DebtorName)</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Phone number: @Html.DisplayFor(modelItem => item.DebtorPhone)</h6>
+                <p class="card-text">@Html.DisplayFor(modelItem => item.Description)</p>
+                <a class="btn btn-primary" asp-page="/DebitCtrl/Details" asp-route-id="@item.Id">Details</a>
+            </div>
+        </div>  
+    }
+</div>

@@ -7,33 +7,23 @@
         width: 400px;
         margin: 32px;
     }
-
-    .form-group {
-        margin-bottom: 8px;
-    }
-
     .button {
         margin-top: 16px;
-    }
-
-    .text-danger {
-        font-size: 16px;
-        margin-left: 8px;
     }
 </style>
 <div>
     <div class="login-form">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
+            <div class="form-group mt-2">
                 <label asp-for="Email" class="control-label">Email</label>
                 <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
+                <span asp-validation-for="Email" class="form-text text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group mt-2">
                 <label asp-for="Password" class="control-label"></label>
                 <input asp-for="Password" class="form-control" type="password" />
-                <span asp-validation-for="Password" class="text-danger"></span>
+                <span asp-validation-for="Password" class="form-text text-danger"></span>
             </div>
             <div class="button">
                 <input type="submit" value="Login" class="btn btn-primary" />

@@ -14,7 +14,8 @@
             List<string> publicUrls = new List<string>()
             {
                 "/shared/login",
-                "/shared/register"
+                "/shared/register",
+                "/shared/logout"
             };
             int? userId = context.Session.GetInt32("userId");
 
