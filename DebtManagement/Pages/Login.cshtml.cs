@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
 using System.Text.RegularExpressions;
 
-namespace DebtManagement.Pages
+namespace DebtManagement.Pages.Shared
 {
     public class LoginModel : PageModel
     {
@@ -19,8 +19,6 @@ namespace DebtManagement.Pages
         }
         public void OnGet()
         {
-            HttpContext.Session.Remove("userId");
-            HttpContext.Session.Remove("userName");
         }
         public IActionResult OnPost(string Email, string Password)
         {
@@ -44,11 +42,7 @@ namespace DebtManagement.Pages
             }
             HttpContext.Session.SetInt32("userId", user.Id);
             HttpContext.Session.SetString("userName", user.DisplayName);
-            HttpContext.Session.SetInt32("userType", user.Type);
-            if (user.Type == 1)
-                return RedirectToPage("/Admin/UserCtrl/Index");
-            else
-                return RedirectToPage("/Index");
+            return RedirectToPage("/Index");
         }
     }
 }

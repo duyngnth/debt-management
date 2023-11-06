@@ -4,66 +4,55 @@
 @{
     ViewData["Title"] = "Create";
 }
-
-<h1>Create</h1>
-
-<h4>DebitDetail</h4>
-<hr />
-<div class="row">
+<div class="m-4">
+    <h4>DebitDetail</h4>
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="DebitDetail.DebitId" value="@Model.DebitId"/>
-            <div class="form-group">
+            <input type="hidden" asp-for="DebitDetail.DebitId" value="@Model.DebitId" />
+            <div class="form-group mt-2">
                 <label asp-for="DebitDetail.Amount" class="control-label"></label>
-                <input asp-for="DebitDetail.Amount" class="form-control" />
-                <span asp-validation-for="DebitDetail.Amount" class="text-danger"></span>
+                <input type="number" asp-for="DebitDetail.Amount" class="form-control" />
+                <span asp-validation-for="DebitDetail.Amount" class="text-danger form-text"></span>
             </div>
-            <!--<div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="DebitDetail.IsPaid" /> @Html.DisplayNameFor(model => model.DebitDetail.IsPaid)
-                </label>
-            </div>-->
-            <div class="form-group">
-                <input type="radio" asp-for="DebitDetail.IsPaid" value="true" id="payRadio"/> Pay
-                <input type="radio" asp-for="DebitDetail.IsPaid" value="false" checked="checked"/> Loan
+
+            <div class="form-group mt-2 w-auto">
+                <label asp-for="DebitDetail.IsPaid" class="control-label">Type</label>
+                <select id="typeSelector" asp-for="DebitDetail.IsPaid" class="form-select">
+                    <option selected value="false">Loan</option>
+                    <option value="true">Pay</option>
+                </select>
             </div>
-            <div class="form-group">
+            <div class="form-group mt-2">
                 <label asp-for="DebitDetail.Date" class="control-label"></label>
-                <input asp-for="DebitDetail.Date" class="form-control" />
-                <span asp-validation-for="DebitDetail.Date" class="text-danger"></span>
+                <input type="date" asp-for="DebitDetail.Date" class="form-control" />
+                <span asp-validation-for="DebitDetail.Date" class="text-danger form-text"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group mt-2">
                 <label asp-for="DebitDetail.Deadline" class="control-label"></label>
-                <input asp-for="DebitDetail.Deadline" class="form-control" id="deadlineInput"/>
-                <span asp-validation-for="DebitDetail.Deadline" class="text-danger"></span>
+                <input type="date" asp-for="DebitDetail.Deadline" class="form-control" id="deadlineInput" />
+                <span asp-validation-for="DebitDetail.Deadline" class="text-danger form-text"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group mt-2">
                 <label asp-for="DebitDetail.Description" class="control-label"></label>
-                <input asp-for="DebitDetail.Description" class="form-control" />
-                <span asp-validation-for="DebitDetail.Description" class="text-danger"></span>
+                <textarea asp-for="DebitDetail.Description" class="form-control"></textarea>
+                <span asp-validation-for="DebitDetail.Description" class="text-danger form-text"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group mt-2">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-page="Index">Back to List</a>
-</div>
-
 <script>
-    document.getElementById("payRadio").addEventListener("change", function () {
-        if (this.checked) {
-            document.getElementById("deadlineInput").disabled = true;
-        } else {
-            document.getElementById("deadlineInput").disabled = false;
-        }
+    document.getElementById("typeSelector").addEventListener("change", function () {
+        document.getElementById("deadlineInput").disabled = this.value === "true";
     });
 </script>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

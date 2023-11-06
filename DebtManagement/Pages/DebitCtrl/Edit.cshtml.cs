@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
 using DebtManagement.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace DebtManagement.Pages.DebitCtrl
 {
@@ -29,13 +25,13 @@ namespace DebtManagement.Pages.DebitCtrl
                 return NotFound();
             }
 
-            var debit =  await _context.Debits.FirstOrDefaultAsync(m => m.Id == id);
+            var debit = await _context.Debits.FirstOrDefaultAsync(m => m.Id == id);
             if (debit == null)
             {
                 return NotFound();
             }
             Debit = debit;
-           ViewData["CreditorId"] = new SelectList(_context.Users, "Id", "Id");
+            ViewData["CreditorId"] = new SelectList(_context.Users, "Id", "Id");
             return Page();
         }
 
@@ -72,7 +68,7 @@ namespace DebtManagement.Pages.DebitCtrl
 
         private bool DebitExists(int id)
         {
-          return (_context.Debits?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Debits?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.EntityFrameworkCore;
 using DebtManagement.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace DebtManagement.Pages.DebitCtrl
 {
@@ -18,7 +14,9 @@ namespace DebtManagement.Pages.DebitCtrl
             _context = context;
         }
 
-      public Debit Debit { get; set; } = default!; 
+        public Debit Debit { get; set; } = default!;
+
+        public IList<DebitDetail> DebitDetail { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -32,10 +30,32 @@ namespace DebtManagement.Pages.DebitCtrl
             {
                 return NotFound();
             }
-            else 
+            else
             {
                 Debit = debit;
             }
+
+            if (_context.DebitDetails != null)
+            {
+                DebitDetail = await _context.DebitDetails
+                .Include(d => d.Debit)
+                .Where(d => d.DebitId == id)
+                .ToListAsync();
+            }
+            decimal TotalAmount = 0;
+            foreach (var item in DebitDetail)
+            {
+                if (item.IsPaid)
+                {
+                    TotalAmount -= item.Amount;
+                }
+                else
+                {
+                    TotalAmount += item.Amount;
+                }
+
+            }
+            ViewData["TotalAmount"] = TotalAmount.ToString("#,##0");
             return Page();
         }
     }

@@ -47,7 +47,7 @@
 
         .nav-header {
             padding: 8px;
-            padding-bottom: 24px;
+            padding-top: 24px;
             margin-right: 16px;
             margin-left: 8px;
             border-bottom: 1px solid #222831;
@@ -103,18 +103,8 @@
                     </a>
                 </li>
                 <li class="nav-layout-item">
-                    <a class="nav-item" aria-current="page">
-                        Home
-                    </a>
-                </li>
-                <li class="nav-layout-item">
-                    <a class="nav-item" aria-current="page">
-                        Home
-                    </a>
-                </li>
-                <li class="nav-layout-item">
-                    <a class="nav-item" aria-current="page">
-                        Home
+                    <a class="nav-item" aria-current="page" asp-page="/DebitCtrl/Create">
+                        Add Debt
                     </a>
                 </li>
             </ul>
@@ -122,10 +112,10 @@
             {
                 <div class="nav-bottom-option">
 
-                    <a class="nav-bottom-item" asp-area="" asp-page="/Login" aria-current="page">
+                    <a class="nav-bottom-item" asp-area="" asp-page="/Shared/Login" aria-current="page">
                         Login
                     </a> |
-                    <a class="nav-bottom-item" asp-area="" asp-page="/Register" aria-current="page">
+                    <a class="nav-bottom-item" asp-area="" asp-page="/Shared/Register" aria-current="page">
                         Register
                     </a>
                 </div>
@@ -133,22 +123,28 @@
             else
             {
                 <div class="nav-bottom-option">
-                    <p class="nav-bottom-item" >Welcome, @HttpContextAccessor.HttpContext.Session.GetString("userName") </p> |
-                    <a class="nav-bottom-item" asp-area="" asp-page="/Logout" aria-current="page">
-                        LogOut
-                    </a>
+                    <div class="btn-group dropend">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            Hi, @HttpContextAccessor.HttpContext.Session.GetString("userName")
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <a class="dropdown-item" asp-area="" asp-page="/Shared/Logout" aria-current="page">
+                                    Log Out
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-               
             }
 
         </div>
         <div>
             @RenderBody()
-            <footer class="border-top footer text-muted">
-                <div class="container">
-                    &copy; 2023 - DebtManagement
-                </div>
-            </footer>
         </div>
 
     </div>
