@@ -5,41 +5,35 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
-
-<h4>Debit</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Debit.Id" />
-            <div class="form-group">
-                <label asp-for="Debit.DebtorName" class="control-label">Name</label>
-                <input asp-for="Debit.DebtorName" class="form-control" />
-                <span asp-validation-for="Debit.DebtorName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Debit.DebtorPhone" class="control-label">Phone</label>
-                <input asp-for="Debit.DebtorPhone" class="form-control" />
-                <span asp-validation-for="Debit.DebtorPhone" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Debit.Description" class="control-label"></label>
-                <input asp-for="Debit.Description" class="form-control" />
-                <span asp-validation-for="Debit.Description" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
-
-<div>
-    <a asp-page="./Index">Back to List</a>
+<div class="m-4">
+    <h4>Edit</h4>
+    <form method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="Debit.Id" />
+        <div class="form-group mt-2 w-25">
+            <label asp-for="Debit.DebtorName" class="control-label">Name</label>
+            <input asp-for="Debit.DebtorName" class="form-control" />
+            <span asp-validation-for="Debit.DebtorName" class="text-danger"></span>
+        </div>
+        <div class="form-group mt-2 w-25">
+            <label asp-for="Debit.DebtorPhone" class="control-label">Phone</label>
+            <input asp-for="Debit.DebtorPhone" class="form-control" />
+            <span asp-validation-for="Debit.DebtorPhone" class="text-danger"></span>
+        </div>
+        <div class="form-group mt-2 w-50">
+            <label asp-for="Debit.Description" class="control-label"></label>
+            <textarea asp-for="Debit.Description" rows="5" class="form-control"></textarea>
+            <span asp-validation-for="Debit.Description" class="text-danger"></span>
+        </div>
+        <div class="form-group mt-2">
+            <input type="submit" value="Save" class="btn btn-primary" />
+        </div>
+    </form>
+  
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

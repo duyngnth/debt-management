@@ -18,7 +18,9 @@ namespace DebtManagement.Pages.DebitCtrl
             _context = context;
         }
 
-      public Debit Debit { get; set; } = default!; 
+        public Debit Debit { get; set; } = default!;
+
+        public IList<DebitDetail> DebitDetail { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -36,6 +38,28 @@ namespace DebtManagement.Pages.DebitCtrl
             {
                 Debit = debit;
             }
+
+            if (_context.DebitDetails != null)
+            {
+                DebitDetail = await _context.DebitDetails
+                .Include(d => d.Debit)
+                .Where(d => d.DebitId == id)
+                .ToListAsync();
+            }
+            decimal TotalAmount = 0;
+            foreach (var item in DebitDetail)
+            {
+                if (item.IsPaid)
+                {
+                    TotalAmount -= item.Amount;
+                }
+                else
+                {
+                    TotalAmount += item.Amount;
+                }
+                
+            }
+            ViewData["TotalAmount"] = TotalAmount.ToString("#,##0");
             return Page();
         }
     }

@@ -5,11 +5,9 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
 
-<div>
+<div class="m-4">
     <h4>DebitDetail</h4>
-    <hr />
     <dl class="row">
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.DebitDetail.Amount)
@@ -41,15 +39,9 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.DebitDetail.Description)
         </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.DebitDetail.Debit)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.DebitDetail.Debit.Id)
-        </dd>
     </dl>
+    <div>
+        <a class="btn btn-primary" asp-page="./Edit" asp-route-id="@Model.DebitDetail?.Id">Edit</a>
+    </div>
 </div>
-<div>
-    <a asp-page="./Edit" asp-route-id="@Model.DebitDetail?.Id">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
-</div>
+

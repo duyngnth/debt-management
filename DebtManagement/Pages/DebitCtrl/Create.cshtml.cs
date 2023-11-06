@@ -20,7 +20,6 @@ namespace DebtManagement.Pages.DebitCtrl
 
         public IActionResult OnGet()
         {
-            ViewData["CreditorId"] = new SelectList(_context.Users, "Id", "Id");
             return Page();
         }
 

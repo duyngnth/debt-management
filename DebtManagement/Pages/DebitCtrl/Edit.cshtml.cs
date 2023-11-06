@@ -35,7 +35,7 @@ namespace DebtManagement.Pages.DebitCtrl
                 return NotFound();
             }
             Debit = debit;
-           ViewData["CreditorId"] = new SelectList(_context.Users, "Id", "Id");
+            ViewData["CreditorId"] = new SelectList(_context.Users, "Id", "Id");
             return Page();
         }
 
