@@ -33,7 +33,14 @@
             @Html.DisplayNameFor(model => model.User.Type)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.User.Type)
+            @if (Model.User.Type == 1)
+            {
+                <span>Admin</span>
+            }
+            else
+            {
+                <span>User</span>
+            }
         </dd>
     </dl>
 </div>

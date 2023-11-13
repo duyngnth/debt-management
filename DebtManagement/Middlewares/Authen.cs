@@ -1,10 +1,10 @@
 ﻿namespace DebtManagement.Middlewares
 {
-    public class Authen
+    public class AuthenticationMiddleware
     {
         private readonly RequestDelegate _next;
 
-        public Authen(RequestDelegate next)
+        public AuthenticationMiddleware(RequestDelegate next)
         {
             _next = next;
         }
@@ -13,24 +13,30 @@
         {
             List<string> publicUrls = new List<string>()
             {
-                "/login",
-                "/register"
+                "/Login",
+                "/Register"
             };
             int? userId = context.Session.GetInt32("userId");
 
-            //check if not logged in and route is not / signin => redirect to signin
-            if (userId == null && !publicUrls.Contains(context.Request.Path.ToString().ToLower()))
+            if (!publicUrls.Contains(context.Request.Path) && userId == null)
             {
-                // No active session, redirect to login page
-                context.Response.Redirect("/login");
+                context.Response.Redirect("/Login");
                 return;
             }
-            else if (userId != null && publicUrls.Contains(context.Request.Path.ToString().ToLower()))
+            if (publicUrls.Contains(context.Request.Path))
             {
-                context.Response.Redirect("/");
-                return;
+                context.Session.Clear();
             }
+
             await _next(context);
+        }
+    }
+
+    public static class AuthenMiddlewareExtensions
+    {
+        public static IApplicationBuilder UseAuthenticationMiddleware(this IApplicationBuilder builder)
+        {
+            return builder.UseMiddleware<AuthenticationMiddleware>();
         }
     }
 }

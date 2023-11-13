@@ -19,6 +19,8 @@ namespace DebtManagement.Pages.DebitCtrl
         }
 
         public IList<Debit> Debits { get;set; } = default!;
+        [BindProperty]
+        public String SearchText { get; set; } = "";
 
         public async Task OnGetAsync()
         {
@@ -29,6 +31,35 @@ namespace DebtManagement.Pages.DebitCtrl
                 .Include(d => d.Creditor)
                 .Include(d => d.DebitDetails)
                 .Where(x => x.CreditorId == HttpContext.Session.GetInt32("userId"))
+                .ToListAsync();
+
+                foreach (var debit in Debits)
+                {
+                    debit.RemainingAmount = 0;
+                    foreach (var detail in debit.DebitDetails)
+                    {
+                        if (!detail.IsPaid)
+                            debit.RemainingAmount += detail.Amount;
+                        else
+                            debit.RemainingAmount -= detail.Amount;
+                    }
+                }
+            }
+        }
+
+        public async Task OnPostAsync()
+        {
+            if (string.IsNullOrEmpty(SearchText))
+                SearchText = "";
+
+            if (_context.Debits != null)
+            {
+                Debits = await _context.Debits
+                .Include(d => d.Creditor)
+                .Include(d => d.DebitDetails)
+                .Where(x => x.CreditorId == HttpContext.Session.GetInt32("userId"))
+                .Where(x => x.DebtorName.ToLower().Contains(SearchText.ToLower())
+                            || x.DebtorPhone.Contains(SearchText))
                 .ToListAsync();
 
                 foreach (var debit in Debits)

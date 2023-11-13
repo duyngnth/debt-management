@@ -41,7 +41,7 @@ app.UseSession();
 
 app.UseAuthorization();
 
-app.UseMiddleware<Authen>();
+app.UseMiddleware<AuthenticationMiddleware>();
 
 app.MapRazorPages();
 

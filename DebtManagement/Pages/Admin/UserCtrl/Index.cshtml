@@ -7,17 +7,11 @@
 
 <h1>Index</h1>
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.User[0].Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.User[0].Password)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.User[0].DisplayName)
@@ -35,16 +29,19 @@
                 @Html.DisplayFor(modelItem => item.Email)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Password)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.DisplayName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Type)
+                    @if (item.Type == 1)
+                    {
+                        <span>Admin</span>
+                    }
+                    else
+                    {
+                        <span>User</span>
+                    }
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
                 <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
             </td>

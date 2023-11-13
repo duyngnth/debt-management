@@ -107,15 +107,22 @@
                         Add Debt
                     </a>
                 </li>
+                @if (HttpContextAccessor.HttpContext.Session.GetInt32("userType") == 1) {
+                    <li class="nav-layout-item">
+                        <a class="nav-item" aria-current="page" asp-page="/Admin/UserCtrl/Index">
+                            Manage User
+                        </a>
+                    </li>
+                }
             </ul>
             @if (HttpContextAccessor.HttpContext.Session.GetInt32("userId") == null)
             {
                 <div class="nav-bottom-option">
 
-                    <a class="nav-bottom-item" asp-area="" asp-page="/Shared/Login" aria-current="page">
+                    <a class="nav-bottom-item" asp-area="" asp-page="/Login" aria-current="page">
                         Login
                     </a> |
-                    <a class="nav-bottom-item" asp-area="" asp-page="/Shared/Register" aria-current="page">
+                    <a class="nav-bottom-item" asp-area="" asp-page="/Register" aria-current="page">
                         Register
                     </a>
                 </div>
@@ -128,12 +135,10 @@
                             Hi, @HttpContextAccessor.HttpContext.Session.GetString("userName")
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" asp-page="/ChangePassword">Change password</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li>
-                                <a class="dropdown-item" asp-area="" asp-page="/Shared/Logout" aria-current="page">
+                                <a class="dropdown-item" asp-area="" asp-page="/Logout" aria-current="page">
                                     Log Out
                                 </a>
                             </li>

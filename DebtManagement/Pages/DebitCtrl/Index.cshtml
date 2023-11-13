@@ -5,6 +5,12 @@
     ViewData["Title"] = "Index";
 }
 
+<div style="margin-top: 20px; margin-left: 25px;">
+    <form method="post">
+        <input type="text" asp-for="SearchText" value="@Model.SearchText" placeholder="Search by name or phone"/>
+        <input class="btn btn-primary" type="submit" value="Search" />
+    </form>
+</div>
 
 <div class="card-list m-4 d-flex flex-row gap-3">
     @foreach (var item in Model.Debits)

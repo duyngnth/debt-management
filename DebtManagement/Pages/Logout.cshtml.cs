@@ -5,10 +5,10 @@ namespace DebtManagement.Pages
 {
     public class LogoutModel : PageModel
     {
-        public IActionResult OnGet()
+        public void OnGet()
         {
             HttpContext.Session.Clear();
-            return RedirectToPagePermanent("login");
+            return;
         }
     }
 }
